@@ -1,0 +1,13 @@
+java_library {
+    name: "jipp",
+    host_supported: true,
+    sdk_version: "core_current",
+    visibility: [
+        "//vendor:__subpackages__",
+    ],
+    srcs: [
+        "jipp-core/src/main/java/**/*.java",
+        "jipp-core/src/main/java/**/*.kt",
+        "jipp-pdl/src/main/kotlin/**/*.kt",
+    ],
+}

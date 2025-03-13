@@ -1,0 +1,9 @@
+# See http://classycle.sourceforge.net/ddf.html
+show allResults
+
+{package} = com.hp.jipp
+[class-file] = ${package}.classfile.*
+[working] = ${package}.* excluding *AutoValue* *.kotlin_module
+
+check absenceOfPackageCycles > 1 in ${package}.*
+check absenceOfClassCycles > 1 in [working]
