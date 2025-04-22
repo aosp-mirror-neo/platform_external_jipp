@@ -11,3 +11,22 @@ java_library {
         "jipp-pdl/src/main/kotlin/**/*.kt",
     ],
 }
+
+java_library {
+    name: "jipp-test-util",
+    host_supported: true,
+    sdk_version: "core_current",
+    visibility: [
+        "//vendor:__subpackages__",
+    ],
+    srcs: [
+        "jipp-pdl/src/test/kotlin/util/*.kt",
+    ],
+    exclude_srcs: [
+        "jipp-pdl/src/test/kotlin/util/KotlinTest.kt",
+    ],
+    static_libs: [
+        "jipp",
+    ],
+    test_only: true,
+}
